@@ -34,6 +34,7 @@ export class Checkout{
             await this.continueToCheckoutButton.waitFor()
             await this.continueToCheckoutButton.click()
             await this.page.waitForURL(/\/login/)
+            await expect(this.page).toHaveURL(/\/login/);
         }
         
 }
